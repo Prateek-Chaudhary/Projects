@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" th:href=@{/css/login-style.css}>
+	<link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet" />
+	<title>Login</title>
+</head>
+
+<body>
+	<div id="heading">
+		<label class="color" style="color: white">Retail</label><label>Store</label>
+	</div>
+	<div id="main">
+		<div id="login">
+			<form action="validation" method="post">
+				<table>
+					<tr>
+						<th align="left">
+							<label class="lbl" for="username">Username <span>*</span></label>
+						</th>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" name="username" id="username" required />
+						</td>
+					</tr>
+					<tr>
+						<th align="left">
+							<label class="lbl" for="password">Password <span>*</span></label>
+						</th>
+					</tr>
+					<tr>
+						<td>
+							<input type="password" name="password" id="password" required />
+						</td>
+					</tr>
+					<tr>
+						<td><button>Login</button></td>
+					</tr>
+				</table>
+				<div align="center">
+					<label id="msg" th:text="${msg}"></label>
+				</div>
+			</form>
+		</div>
+		<div id="images">
+			<img th:src=@{/images/login.jpg} alt="Image in not presentable due to any bug....." />
+		</div>
+	</div>
+	<footer>
+		<label>&copy; Prateek Chaudhary &nbsp;<strong>|</strong>&nbsp; All Rights
+			Reserved</label>
+	</footer>
+</body>
+
+</html>

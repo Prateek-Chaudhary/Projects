@@ -1,0 +1,111 @@
+	* {
+            margin: 0;
+            padding: 0;
+        }
+
+        #body {
+            display: flex;
+            height: 91vh;
+        }
+
+        #navigation {
+            width: 20%;
+        }
+
+        .name {
+            background-color: red;
+            text-align: center;
+            font-size: 2rem;
+            font-family: 'Dosis', sans-serif;
+            color: white;
+            font-weight: bolder;
+            text-shadow: 3px 3px 5px black;
+            padding: 1vh 0vw;
+        }
+
+        #navbar {
+            background-color: rgba(48, 48, 83, 0.822);
+            height: 90.79%;
+        }
+
+        #navbar ul li {
+            border-bottom: 2px solid rgb(63, 63, 63);
+
+        }
+
+        #navbar ul li:hover {
+            background-color: rgba(54, 54, 97, 0.822);
+        }
+
+        #navbar ul li a {
+            display: block;
+            text-decoration: none;
+            color: rgb(200, 200, 200);
+            font-size: 1.3rem;
+            padding: 2vh 0vw;
+            padding-left: 1.8vw;
+        }
+
+        #dashboard {
+            width: 80%;
+            background-color: rgb(226, 249, 249);
+        }
+
+        #heading {
+            background-color: white;
+        }
+
+        .store-name {
+            font-size: 1.7rem;
+            font-weight: bolder;
+            margin-left: 2vw;
+            font-family: 'Zilla Slab', serif;
+        }
+
+        .admin {
+            float: right;
+            font-size: 0.8rem;
+            margin-top: 1.8vh;
+            margin-right: 1vw;
+            font-family: 'Comfortaa', cursive;
+        }
+
+        #frame {
+            margin-top: 0.8vh;
+            height: 91.5%;
+        }
+
+        #frame iframe {
+            position: absolute;
+            top: 7vh;
+            left: 20vw;
+            height: 84%;
+            width: 80%;
+        }
+
+        #frame img {
+            height: 100%;
+            width: 100%;
+        }
+
+        footer {
+            margin-top: 0.5vh;
+            height: 7vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            background-color: red;
+            color: white;
+            font-family: 'Dosis', sans-serif;
+        }
+
+        footer label {
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        footer label strong {
+            font-size: x-large;
+            font-weight: bolder;
+        }

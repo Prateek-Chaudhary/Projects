@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href=@{/css/productreport-style.css}>
+    <title>Product Report</title>
+</head>
+
+<body>
+    <div id="main">
+        <div>
+            <section>
+                <label class="lbl">Product</label>&nbsp;<label>Report</label>
+            </section>
+            <div>
+                <table cell-padding="2" cell-spacing="2">
+                    <thead>
+                        <tr>
+                            <th><label>Product Id</label></th>
+                            <th><label>Product Name</label></th>
+                            <th><label>Product Company</label></th>
+                            <th><label>Product Type</label></th>
+                            <th><label>Product Cost</label></th>
+                            <th><label style="color: rgb(94, 0, 94);">Action</label></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="product:${product}">
+                            <td th:text="${product.product_id}"></td>
+                            <td th:text="${product.product_name}"></td>
+                            <td th:text="${product.product_company.company_name}"></td>
+                            <td th:text="${product.product_type}"></td>
+                            <td th:text="${product.price}"></td>
+                            <td><a th:href=@{edit-product(product_id=${product.product_id})}>Edit</a><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a onclick="return confirm('Are you sure to delete !!')" th:href=@{delete-product(product_id=${product.product_id})}>Delete</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

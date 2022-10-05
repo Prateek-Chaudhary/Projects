@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href=@{/css/invoice-style.css}>
+    <script th:src=@{/javascript/script.js} ></script>
+    <title>Invoice</title>
+</head>
+
+<body>
+    <div id="main">
+        <div id="heading">
+            <section>
+                <label class="lbl">Retail</label>&nbsp;<label>Invoice</label>
+            </section>
+        </div>
+        <section id="customer_info">
+            <div id="customer">
+                <div>
+                    <label class="nme">Name :</label>
+                    <label class="value" th:text="${order.customer.customer_name}"></label>
+                </div>
+                <div>
+                    <label class="nme">Email :</label>
+                    <label class="value" th:text="${order.customer.customer_email}"></label>
+                </div>
+                <div>
+                    <label class="nme">Phone No. :</label>
+                    <label class="value" th:text="${order.customer.customer_phone}"></label>
+                </div>
+            </div>
+            <div id="order">
+                <div>
+                    <label class="nme">Order No. :</label>
+                    <label class="value" th:text="${order.order_no}"></label>
+                </div>
+                <div>
+                    <label class="nme">Date :</label>
+                    <label class="value" th:text="${order.date}"></label>
+                </div>
+                <div>
+                    <label class="nme">Payment Method :</label>
+                    <label class="value">By Cash</label>
+                </div>
+            </div>
+        </section>
+        <div id="table" align="center">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th style="width:20%;">Product</th>
+                        <th style="width:30%;">Company</th>
+                        <th>Quantity</th>
+                        <th style="width:16%;">Price</th>
+                        <th style="width:22%;">Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="customer_order,itr :${co}">
+                        <td th:text="${itr.index+1}"></td>
+                        <td th:text="${customer_order.product.product_name}"></td>
+                        <td th:text="${customer_order.product.product_company.company_name}"></td>
+                        <td th:text="${customer_order.quantity}"></td>
+                        <td th:text="${customer_order.price}"></td>
+                        <td th:text="${customer_order.amount}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="amount" align="right">
+            <label>Total Amount :</label>
+            <span id="amt" th:text="${amount}"></span>
+        </div>
+    </div>
+</body>
+
+</html>

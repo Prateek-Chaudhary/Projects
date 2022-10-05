@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href=@{/css/addcompany-style.css}>
+    <title>Add Product Company</title>
+</head>
+
+<body>
+    <section id="main">
+        <form action="editcompany" method="post">
+            <table>
+                <thead>
+                    <tr>
+                        <th><label class="pc" id="pc">Product</label>&nbsp;<label class="pc">Company</label></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label>Company Name :</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        	<input type="hidden" name="company_id" id="cid" th:value="${company.company_id}">
+                            <input type="text" name="company_name" id="cname" th:value="${company.company_name}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Company Description :</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea name="company_desc" id="cdesc" cols="40" rows="5" th:text="${company.company_desc}" th:value="${company.company_desc}"></textarea>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>
+                            <button>Update Company</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </section>
+</body>
+
+</html>

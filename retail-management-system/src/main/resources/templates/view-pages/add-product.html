@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href=@{/css/addproduct-style.css}>
+</head>
+
+<body>
+    <div id="main">
+        <form action="save-product" method="post">
+            <section>
+                <div id="heading">
+                    <label>Product</label>
+                </div>
+            </section>
+            <div id="pr_name">
+                <input type="text" name="product_name" placeholder="Enter Product Name">
+            </div>
+            <div id="pr_company">
+                <select name="product_company">
+                    <option selected disabled>Select the Product Company</option>
+                    <option  th:each=company:${company} th:text="${company.company_name}" th:value="${company.company_id}"></option>
+                </select>
+            </div>
+            <div id="pr_type">
+                <input type="text" name="product_type"  placeholder="Enter the type of Company">
+            </div>
+            <div id="pr_price">
+                <input type="text" name="price" placeholder="Price of the Product">
+            </div>
+            <div id="btn" align="center">
+                <button>Add Product</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

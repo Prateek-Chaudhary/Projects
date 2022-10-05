@@ -1,0 +1,82 @@
+		#main {
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
+            border-radius: 10px;
+            margin-top: 5vh;
+            padding: 0.5vh 3vw;
+            box-shadow: 0px 0px 10px black;
+        }
+
+        section div {
+            margin-top: 1.5vh;
+            margin-bottom: 10vh;
+            font-size: 3em;
+            font-family: 'Kanit', sans-serif;
+            color: rgb(240, 149, 29);
+            text-shadow: 3px 3px 5px black;
+        }
+
+        .lbl {
+            background-color: red;
+            padding: 0vh 1vw;
+            border-radius: 3px;
+            color: white;
+        }
+
+        #heading {
+            text-align: center;
+            font-size: 3rem;
+            font-family: 'Libre Baskerville', serif;
+            font-weight: bolder;
+        }
+        
+        input {
+            height: 5vh;
+            width: 30vw;
+            margin-left: 3vw;
+            border: 2px solid black;
+            border-radius: 5px;
+            font-size: larger;
+        }
+
+        select {
+            height: 5vh;
+            width: 30vw;
+            border: 2px solid black;
+            border-radius: 5px;
+            font-size: larger;
+        }
+
+        form>div {
+            margin: 6vh 0vw;
+        }
+
+        button {
+            margin-top: 2vh;
+            padding: 0.5vh 10vw;
+            font-size: 1.5rem;
+            font-weight: bolder;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: red;
+            color: white;
+            font-family: 'Indie Flower', cursive;
+        }
+
+        button:hover {
+            background-color: rgb(241, 103, 103);
+            cursor: pointer;
+        }
+        
+        #invoice {
+			text-decoration: none;
+			font-size: 1.7em;
+			color: cornflowerblue;
+		}
+		
+		#invoice:hover {
+			color: blue;
+		}

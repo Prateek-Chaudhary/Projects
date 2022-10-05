@@ -1,0 +1,125 @@
+		body {
+            overflow: hidden;
+        }
+        #main {
+            margin: 5vh 9.6vw 0vh 9.6vw;
+            padding: 0vh 1vw;
+            box-shadow: 0px 0px 5px black;
+        }
+
+        #main::before {
+            content: "";
+            background: url("../images/bgi.png");
+            background-position-x: 25vw;
+            background-position-y: 20vh;
+            background-repeat: no-repeat;
+            background-size: 450px;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        #heading {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        #heading section {
+            margin-top: 1.5vh;
+            margin-bottom: 5vh;
+            font-size: 3em;
+            font-family: 'Lato', sans-serif;
+            color: rgb(240, 149, 29);
+            text-shadow: 3px 3px 5px black;
+        }
+
+        .lbl {
+            background-color: red;
+            padding: 0vh 1vw;
+            border-radius: 3px;
+            color: white;
+        }
+
+        #customer_info {
+            display: flex;
+        }
+
+        #customer {
+            width: 50%;
+        }
+
+        #customer div {
+            margin: 2vh 0vw;
+        }
+
+        #order {
+            width: 50%;
+            text-align: right;
+        }
+
+        #order div {
+            margin: 2vh 0vw;
+        }
+
+        .nme {
+            font-size: x-large;
+            font-weight: bolder;
+            color: rgb(2, 2, 160);
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .value {
+            font-size: x-large;
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        #table {
+            margin-top: 0.5vh;
+        }
+
+        table {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        table tr,
+        th,
+        td {
+            padding: 1.5vh 0.5vw;
+        }
+
+        table tr th {
+            border-right: 1px solid rgb(155, 155, 155);
+            border-bottom: 2px solid black;
+            font-size: 1.4em;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        table tr td {
+            border-right: 1px solid rgb(155, 155, 155);
+            font-size: 1.3em;
+            text-align: center;
+            font-family: 'Merriweather', serif;
+        }
+
+        #amount {
+            margin-right: 3vw;
+            padding: 2vh 0vw;
+        }
+
+        #amount label {
+            font-size: x-large;
+            font-weight: bolder;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        #amount span {
+            font-size: x-large;
+            font-weight: bold;
+            color: blueviolet;
+            font-family: 'EB Garamond', serif;
+        }

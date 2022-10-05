@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" th:href=@{/css/bootstrap.min.css}>
+    <link rel="stylesheet" th:href=@{/css/home-style.css}>
+    <script th:src=@{/javascript/script.js} ></script>
+    <title>Home</title>
+</head>
+
+<body>
+    <div id="body">
+        <div id="navigation">
+            <div class="name"><i class="fa fa-store"></i> &nbsp; Retailer Menu</div>
+            <div id="navbar">
+                <ul>
+                    <li><a href="home" id="hme"><i class="fa fa-home"></i>&nbsp;DashBoard</a></li>
+                    
+                    <li><a href="addproduct" target="show-box" id="add-product" onclick="changeProperty()"><i
+                                class="fa fa-laptop-code"></i>&nbsp;Add Product</a></li>
+                               
+                    <li><a href="productreport" target="show-box" id="product-report" onclick="changeProperty()"><i
+                                class="fa fa-list-alt"></i>&nbsp;Product Report</a></li>
+                               
+                    <li><a href="addproductcompany" target="show-box" id="add-product-company" onclick="changeProperty()"><i class="fa fa-desktop"></i>&nbsp;Add
+                            Product Company</a></li>
+                           
+                    <li><a href="productcompany" target="show-box" id="product-company-report" onclick="changeProperty()"><i class="fa fa-list"></i>&nbsp;Product
+                            Company Report</a></li>
+                           
+                    <li><a href="orderreport" target="show-box" id="order-report" onclick="changeProperty()"><i
+                                class="fa fa-shopping-bag"></i>&nbsp;Order Report</a></li>
+                               
+                    <li><a href="order" target="show-box" id="bill" onclick="changeProperty()"><i
+                                class="fa fa-receipt"></i>&nbsp;Order</a></li>
+                               
+                    <li><a href="logout" ><i class="fa fa-sign-out-alt"></i>&nbsp;Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="dashboard">
+            <div id="heading">
+                <label class="store-name">Retail Store Manager</label>
+                <label class="admin"><i class="fa fa-user-alt"></i>&nbsp;<span th:text="${session.name}"></span></label>
+            </div>
+            <div id="frame">
+                <img th:src=@{/images/dashboard.jpg} alt="">
+                <iframe src="" id="iframe" name="show-box">
+                </iframe>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <label>&copy; Prateek Chaudhary &nbsp;<strong>|</strong>&nbsp; All Rights
+            Reserved</label>
+    </footer>
+</body>
+
+</html>

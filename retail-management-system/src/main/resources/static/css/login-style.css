@@ -1,0 +1,115 @@
+		#heading {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1vh;
+            text-shadow: 2px 2px 4px black;
+        }
+
+        #heading label {
+            font-size: 3rem;
+            font-family: 'Aboreto', cursive;
+            font-weight: bolder;
+            color: #008080;
+        }
+
+        .color {
+            background-color: red;
+            padding: 0.3vh 0.7vw;
+            margin-right: 0.5vw;
+            border-radius: 3px;
+        }
+
+        #main {
+            display: flex;
+            height: 80vh;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(252, 246, 239);
+            border-radius: 15px;
+
+        }
+
+        #login {
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30%;
+            height: 50%;
+            margin-right: 5vw;
+            box-shadow: 0.1px 0.1px 5px rgb(215, 214, 214);
+        }
+
+        #login form {
+            font-size: 1.2rem;
+        }
+
+        #login form input {
+            width: 20vw;
+            height: 3vh;
+            border: 1.5px solid black;
+            border-radius: 10px;
+        }
+
+        #login form button {
+            margin: 2vh 0vw;
+            padding: 0vh 3vw;
+            font-size: large;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: rgb(246, 72, 72);
+            color: aliceblue;
+        }
+
+        #login form button:hover {
+            cursor: pointer;
+            background-color: rgb(249, 141, 141);
+        }
+
+        #images {
+            width: 50%;
+            height: 80%;
+            margin-left: 5vw;
+            box-shadow: 4px 4px 8px black;
+        }
+
+        #images img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .lbl {
+            color: rgb(70, 69, 69);
+            font-family: 'Dosis', sans-serif;
+        }
+
+        span {
+            color: red;
+            font-size: large;
+        }
+
+        #msg {
+            color: red;
+        }
+
+        footer {
+            margin-top: 1vh;
+            height: 7vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            background-color: red;
+            color: white;
+            font-family: 'Dosis', sans-serif;
+        }
+
+        footer label {
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        footer label strong {
+            font-size: x-large;
+            font-weight: bolder;
+        }

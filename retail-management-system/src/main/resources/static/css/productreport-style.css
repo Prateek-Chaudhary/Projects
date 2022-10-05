@@ -1,0 +1,74 @@
+		#main {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        #main>div {
+            border-radius: 10px;
+            margin-top: 5vh;
+            padding: 1vh 2vw;
+            text-align: center;
+            background-color: rgb(248, 246, 244);
+            box-shadow: 0px 0px 5px black;
+        }
+
+        #main div>div {
+            height: 60vh;
+            overflow: scroll;
+        }
+
+        section {
+            margin-top: 1.5vh;
+            margin-bottom: 10vh;
+            font-size: 3em;
+            font-family: 'Kanit', sans-serif;
+            color: rgb(240, 149, 29);
+            text-shadow: 3px 3px 5px black;
+        }
+
+        .lbl {
+            background-color: red;
+            padding: 0vh 1vw;
+            border-radius: 3px;
+            color: white;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table tr,
+        th,
+        td {
+            border-bottom: 1px solid black;
+            padding: 2vh 0.5vw;
+        }
+
+        table tr th {
+            width: 12vw;
+            font-size: 1.4em;
+            color: white;
+            text-shadow: 3px 3px 6px black;
+            font-family: 'Inconsolata', monospace;
+        }
+
+        table tr td {
+            font-size: 1.3em;
+            font-family: 'Dosis', sans-serif;
+        }
+
+        table tr td a {
+            text-decoration: none;
+            color: forestgreen;
+        }
+
+        table thead tr {
+            background-color: rgb(166, 205, 206);
+            top: 0.01vh;
+            position: sticky;
+        }
+
+        table tbody tr:hover {
+            background-color: rgb(248, 210, 210);
+        }
