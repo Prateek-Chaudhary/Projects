@@ -1,1 +1,23 @@
+                                                            Retail Store Management System
 
+1. This project is for retail shops where owner do all his stuffs in the notes.
+2. In this project various technologies are used like Spring Boot, ThymeLeaf, Spring Data JPA.
+3. Built in the Spring Suite Tool(STS), it's a software for spring boot web applications.
+4. For database connection mysql is used, bootstrap framework is also used.
+5. Frontend is fully build in HTML, CSS and JavaScript & for Backend SpringBoot is used.
+
+
+When this web application is executed a login page is encountered, user have to enter the credentials to login to the Retail Store Management System
+after entering the correct credentials home page is shown which is the main dashboard of the project and if credentials are incorrect then again login
+page is send back to the user then the user have to enter the credentials again, always fill the credentials carefully.
+
+Menu is on the left side of the page where options like adding company, product, product report, company report, order report and logout are listed.
+User can add the company whose products are came for sale on this shop and also add the products of the companies which are available at this shop, user can see
+the list of all the companies whose product are came to the shop for sale and the list of the products which are available on the shop.
+
+When a customer is buy product from the shop then user can give bill to the customer. Details are taken from the customer and adding all the products which the
+customer buys and printing the bill of all the stuffs that the customer buys. These details are stored in the retail store database from where user can delete the
+order details if he wants to clear the database.
+
+Also user can delete the company as well as the products of that company if the owner cannot want that company products anymore.
+After finishing the work user can logout then login page is returned. If owner want to login again then it’s easy enter the credentials again and home page is shown.
