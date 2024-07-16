@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useOutletContext } from "react-router-dom";
+import { Navigate, useNavigate, useOutletContext } from "react-router-dom";
 
 function Registration() {
   let [isLoginPage, setIsLoginPage] = useOutletContext();
@@ -13,8 +13,8 @@ function Registration() {
   let [termAndConditions, setTermAndConditions] = useState(false);
 
   // States used to store that the email or password is correct or not.
-  let [isEmailCorrect, setIsEmailCorrect] = useState(null);
-  let [isPasswordCorrect, setIsPasswordCorrect] = useState(null);
+  let [isEmailCorrect, setIsEmailCorrect] = useState(true);
+  let [isPasswordCorrect, setIsPasswordCorrect] = useState(true);
 
   // Email validation method
   let handleEmail = () => {
@@ -51,10 +51,18 @@ function Registration() {
     handlePassword();
   }, [password]);
 
+  let navigate = useNavigate();
+
+  let handleSignUp = async () => {
+    if (name !== "" && isEmailCorrect && isPasswordCorrect && termAndConditions) {
+      navigate("/verifyOtp");
+    }
+  }
+
   return (
     <>
       <div className="signUpForm ml-16">
-        <div className="registrationHeading text-lg text-cyan-800 my-3">
+        <div className="registrationHeading text-xl font-semibold text-cyan-800 my-3">
           Sign Up details
         </div>
         <div className="name">
@@ -107,7 +115,7 @@ function Registration() {
           </span>
         </div>
         <div className="signUpButton text-center my-5 -ml-16">
-          <button className="text-lg py-1 px-28 rounded-2xl bg-gradient-to-br from-gradientPurple to-gradientBlue text-white font-semibold">
+          <button onClick={handleSignUp} className="text-lg py-1 px-28 rounded-2xl bg-gradient-to-br from-gradientPurple to-gradientBlue text-white font-semibold hover:text-gray-200 active:text-gray-100">
             SignUp
           </button>
         </div>

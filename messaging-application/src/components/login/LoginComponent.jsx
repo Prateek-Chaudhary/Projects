@@ -12,8 +12,8 @@ function LoginComponent() {
   let [password, setPassword] = useState("");
 
   // States used to store that the email or password is correct or not.
-  let [isEmailCorrect, setIsEmailCorrect] = useState(null);
-  let [isPasswordCorrect, setIsPasswordCorrect] = useState(null);
+  let [isEmailCorrect, setIsEmailCorrect] = useState(true);
+  let [isPasswordCorrect, setIsPasswordCorrect] = useState(true);
 
   // Email validation method
   let handleEmail = () => {
@@ -62,13 +62,12 @@ function LoginComponent() {
     } else {
       setIsLoginInfoCorrect(true);
     }
-    event.preventDefault();
   };
 
   return (
     <>
       <div className="loginForm text-center pt-4">
-        <div className="loginHeading text-lg text-cyan-800 my-3">
+        <div className="loginHeading text-xl font-semibold text-cyan-800 my-3">
           Sign In Here
         </div>
         <div className="email">
@@ -98,23 +97,40 @@ function LoginComponent() {
           />
         </div>
         <div className="signInErrorMessage h-6 mt-1">
-          <span className={`text-red-900 ${isLoginInfoCorrect ? "hidden" : ""} font-semibold`}>
+          <span
+            className={`text-red-900 ${
+              isLoginInfoCorrect ? "hidden" : ""
+            } font-semibold`}
+          >
             Email or Password is incorrect!
           </span>
         </div>
         <div className="loginButton my-4">
-          <button onClick={handleSignIn} className="text-lg py-1 px-28 rounded-2xl bg-gradient-to-br from-gradientPurple to-gradientBlue text-white font-semibold hover:text-gray-200 active:text-gray-100">
+          <button
+            onClick={handleSignIn}
+            className="text-lg py-1 px-28 rounded-2xl bg-gradient-to-br from-gradientPurple to-gradientBlue text-white font-semibold hover:text-gray-200 active:text-gray-100"
+          >
             Login
           </button>
         </div>
-        <div className="registerWithUs pt-1">
-          {"Don't have an account? "}
-          <Link
-            to="/registration"
-            className="text-blue-900 underline font-semibold hover:text-blue-700 hover:no-underline"
-          >
-            SignUp
-          </Link>
+        <div className="pt-1 flex justify-around">
+          <div className="registerWithUs">
+            {"Don't have an account? "}
+            <Link
+              to="/registration"
+              className="text-blue-900 underline font-semibold hover:text-blue-700 hover:no-underline"
+            >
+              SignUp
+            </Link>
+          </div>
+          <div className="forgotPassword">
+            <Link
+              to="/forgotPassword"
+              className="text-blue-900 underline font-semibold hover:text-blue-700 hover:no-underline"
+            >
+              Forgot Password?
+            </Link>
+          </div>
         </div>
       </div>
     </>
