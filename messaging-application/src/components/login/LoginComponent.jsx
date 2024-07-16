@@ -108,13 +108,13 @@ function LoginComponent() {
         <div className="loginButton my-4">
           <button
             onClick={handleSignIn}
-            className="text-lg py-1 px-28 rounded-2xl bg-gradient-to-br from-gradientPurple to-gradientBlue text-white font-semibold hover:text-gray-200 active:text-gray-100"
+            className="text-lg py-1 px-20 md:px-24 lg:px-28 rounded-2xl bg-gradient-to-br from-gradientPurple to-gradientBlue text-white font-semibold hover:text-gray-200 active:text-gray-100"
           >
             Login
           </button>
         </div>
         <div className="pt-1 flex justify-around">
-          <div className="registerWithUs">
+          <div className="registerWithUs text-[0.7rem] md:text-[0.8rem] lg:text-[1rem]">
             {"Don't have an account? "}
             <Link
               to="/registration"
@@ -123,7 +123,7 @@ function LoginComponent() {
               SignUp
             </Link>
           </div>
-          <div className="forgotPassword">
+          <div className="forgotPassword text-[0.7rem] md:text-[0.8rem] lg:text-[1rem]">
             <Link
               to="/forgotPassword"
               className="text-blue-900 underline font-semibold hover:text-blue-700 hover:no-underline"

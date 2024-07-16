@@ -85,7 +85,7 @@ function ChangePassword() {
         <div className="changePasswordButton mt-8">
           <button
             onClick={handleChangePassword}
-            className="text-lg py-1 px-28 rounded-2xl bg-gradient-to-br from-gradientPurple to-gradientBlue text-white font-semibold hover:text-gray-200 active:text-gray-100"
+            className="text-lg py-1 px-20 lg:px-28 rounded-2xl bg-gradient-to-br from-gradientPurple to-gradientBlue text-white font-semibold hover:text-gray-200 active:text-gray-100"
           >
             Change
           </button>

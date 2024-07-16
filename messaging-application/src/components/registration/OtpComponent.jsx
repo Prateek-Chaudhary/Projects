@@ -20,7 +20,7 @@ function OtpComponent() {
       <div className="heading text-xl font-semibold py-2 text-cyan-900">
         Verify Otp
       </div>
-      <div className="otpText text-[1.25rem] text-cyan-700">
+      <div className="otpText text-[1.15rem] lg:text-[1.25rem] text-cyan-700">
         A OneTimePassword has been sent to your registered email.
       </div>
       <div className="otp my-5">
