@@ -33,7 +33,7 @@ function ForgotPassword() {
   }
 
   return (
-    <div className="text-center mt-10 flex flex-col justify-around h-60">
+    <div className="text-center flex flex-col justify-around h-60">
       <div className="forgotPasswordHeading text-xl text-cyan-900 font-semibold">
         Forgot Password?
       </div>
@@ -45,7 +45,7 @@ function ForgotPassword() {
           onChange={(e) => setEmail(e.target.value)}
           className={`border ${
             isEmailCorrect ? "" : "border-red-600"
-          } bg-cyan-50 w-[80%] h-10 rounded-md pl-3 placeholder:text-lg outline-none text-cyan-800 text-lg my-2`}
+          } bg-cyan-50 w-[80%] h-10 rounded-md pl-3 placeholder:text-lg outline-none text-cyan-800 text-lg`}
           id="userEmail"
           placeholder="Email"
         />
@@ -56,7 +56,7 @@ function ForgotPassword() {
         </span>
       </div>
       <div className="submitBtn">
-        <button onClick={checkEmail} className='bg-gradient-to-br from-gradientPurple to-gradientBlue px-12 rounded-3xl py-1 text-white text-2xl'>Check</button>
+        <button onClick={checkEmail} className='bg-gradient-to-br from-gradientPurple to-gradientBlue px-12 rounded-3xl py-1 text-white text-2xl'>Forgot</button>
       </div>
     </div>
   );

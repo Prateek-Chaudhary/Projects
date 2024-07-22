@@ -15,7 +15,7 @@ function RegistrationLoginTemplate() {
 
   return (
     <section
-      className="registrationLoginBox flex w-[90%] md:w-[80%] xl:w-[70%] mx-auto mt-28 rounded-xl"
+      className="registrationLoginBox flex w-[90%] md:w-[80%] xl:w-[70%] mx-auto mt-20 rounded-xl"
       style={{ boxShadow: "0px 0px 15px #8c8c8c" }}
     >
       <div className="registrationLoginTemplate w-[50%] bg-gradient-to-br from-gradientPurple to-gradientBlue flex flex-col items-center justify-around rounded-l-xl">
@@ -57,7 +57,7 @@ function RegistrationLoginTemplate() {
             </Link>
           </div>
         </div>
-        <div className="signSection h-[42vh]">
+        <div className="signSection h-[43vh]">
           <Outlet context={[isLoginPage, setIsLoginPage]} />
         </div>
         <div className="oauthCredLogin">

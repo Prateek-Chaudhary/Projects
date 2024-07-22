@@ -7,6 +7,7 @@ import NotFoundPage from './components/notFoundPage/NotFoundPage';
 import OtpComponent from "./components/registration/OtpComponent";
 import ForgotPassword from "./components/forgotPassword/ForgotPassword";
 import ChangePassword from "./components/forgotPassword/ChangePassword";
+import Home from "./components/home/Home";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
         element: <ChangePassword />
       }
     ],
+  },
+  {
+    path: "home",
+    element: <Home />
   },
   {
     path: "*",

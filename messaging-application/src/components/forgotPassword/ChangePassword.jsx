@@ -52,11 +52,11 @@ function ChangePassword() {
 
   return (
     <div>
-      <div className="changePasswordForm text-center mt-8">
-        <div className="changePasswordHeading text-xl font-semibold text-cyan-800 my-3">
+      <div className="changePasswordForm text-center mt-4">
+        <div className="changePasswordHeading text-xl font-semibold text-cyan-800">
           Change Password
         </div>
-        <div className="password mt-8">
+        <div className="password mt-5">
           <input
             type="password"
             name="password"

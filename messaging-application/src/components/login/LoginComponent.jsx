@@ -66,7 +66,7 @@ function LoginComponent() {
 
   return (
     <>
-      <div className="loginForm text-center pt-4">
+      <div className="loginForm text-center">
         <div className="loginHeading text-xl font-semibold text-cyan-800 my-3">
           Sign In Here
         </div>
@@ -78,7 +78,7 @@ function LoginComponent() {
             onChange={(e) => setEmail(e.target.value)}
             className={`border ${
               isEmailCorrect ? "" : "border-red-600"
-            } bg-cyan-50 w-[80%] h-10 rounded-md pl-3 placeholder:text-lg outline-none text-cyan-800 text-lg my-2`}
+            } bg-cyan-50 w-[80%] h-10 rounded-md pl-3 placeholder:text-lg outline-none text-cyan-800 text-lg my-1`}
             id="userEmail"
             placeholder="Email"
           />
@@ -91,12 +91,12 @@ function LoginComponent() {
             onChange={(e) => setPassword(e.target.value)}
             className={`border ${
               isPasswordCorrect ? "" : "border-red-600"
-            } bg-cyan-50 w-[80%] h-10 rounded-md pl-3 placeholder:text-lg outline-none text-cyan-800 text-lg my-2`}
+            } bg-cyan-50 w-[80%] h-10 rounded-md pl-3 placeholder:text-lg outline-none text-cyan-800 text-lg my-1`}
             placeholder="Password"
             id="userPassword"
           />
         </div>
-        <div className="signInErrorMessage h-6 mt-1">
+        <div className="signInErrorMessage h-6">
           <span
             className={`text-red-900 ${
               isLoginInfoCorrect ? "hidden" : ""
@@ -105,7 +105,7 @@ function LoginComponent() {
             Email or Password is incorrect!
           </span>
         </div>
-        <div className="loginButton my-4">
+        <div className="loginButton my-2">
           <button
             onClick={handleSignIn}
             className="text-lg py-1 px-20 md:px-24 lg:px-28 rounded-2xl bg-gradient-to-br from-gradientPurple to-gradientBlue text-white font-semibold hover:text-gray-200 active:text-gray-100"
